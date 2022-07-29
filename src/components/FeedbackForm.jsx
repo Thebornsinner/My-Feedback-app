@@ -6,7 +6,7 @@ import Button from './shared/Button'
 
 function FeedbackForm({handleAdd}) {
     const [text, setText] = useState('')
-    const [rating, setRating] = useState(10)
+    const [rating] = useState(10)
     const [btnDisabled, setbtnDisabled] = useState('')
     const [message, setMessage] = useState('')
 
@@ -15,7 +15,7 @@ const handleTextChange = (e) => {
     if(text=== ''){
         setbtnDisabled(true)
         setMessage(null)
-    } else if(text !== '' && text.trim(). length <= 10){
+    } else if(text !== '' && text.trim().length <= 10){
         setbtnDisabled(true)
         setMessage('Text must be at least 10 characters!')
     } else{
